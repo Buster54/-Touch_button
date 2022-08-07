@@ -5,6 +5,9 @@
 #define sensor 6
 #define timer_led 13
 
+#define button_1 16738455
+#define button_2 16756815
+
 int work, TIME, chek, time_chek;
 long timer;
 
@@ -66,10 +69,10 @@ void rele_v(){
 void ir_v(){
 
     switch (res.value){
-        case 16738455:
+        case button_1:
             work++;
         break;
-        case 16756815:
+        case button_2:
             TIME++;
             timer = millis();
         break;
